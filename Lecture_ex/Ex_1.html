@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_1</title>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <p>Paragraph</p>
+    <script>
+        alert("Hello World");
+        var arry = ["A", "B", "C"];
+
+        for (var i = 0; i < arry.length; i++) {
+            console.log(arry[i]);
+            console.log("debug" + i);
+        }
+        firstFunction(5);
+        
+        function person (name, age) {
+            this.name = name;
+            this.age = age;
+        }   
+        person.prototype.getFullName = function() {
+            return this.name + " " + this.age;
+        }   
+        var p1 = new person("John", 25);
+        console.log(p1.getFullName());  
+
+    </script>
+    
+</body>
+</html>
