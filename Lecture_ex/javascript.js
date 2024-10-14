@@ -1,5 +1,8 @@
 console.log("Javascript is linked");
 
+var comment = document.getElementById('myFieldset');
+comment.style.display="none";
+
 
 function firstFunction( number) {
     console.log("This is the first function " + number);
@@ -20,4 +23,18 @@ function showXY(event) {
     var y = event.clientY;
     var coords = "X coords: " + x + ",<br> Y coords: " + y;
     document.getElementById('coordinates').innerHTML = coords;
+}
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x== null || x == "" || x.length < 3) {
+        document.forms.myForm.fname.style.borderColor = "red";
+        document.getElementById('feedback').innerHTML = "<b>*Fill in proplery</b>";
+        return false;
+    }
+}
+
+function showExtraFields() {
+    var y = document.getElementById('myFieldset');
+    y.style.display = "block";
 }
